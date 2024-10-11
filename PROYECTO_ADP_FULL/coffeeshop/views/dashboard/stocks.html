@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard - Administrar stock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" rel="icon" href="../../resources/img/logowalk.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../../resources/css/dashboard.css">
+</head>
+
+<body>
+    <header></header>
+    <main class="container">
+        <h3 class="center-align">Administrar Stock</h3>
+        <div class="row">
+            <form method="post" id="search-form">
+                <div class="input-field col s6 m4">
+                    <i class="material-icons prefix">search</i>
+                    <input id="search" type="text" name="search" required>
+                    <label for="search">Buscador</label>
+                </div>
+                <div class="input-field col s6 m4">
+                    <button type="submit" class="btn-floating waves-effect green tooltipped" data-tooltip="Buscar">
+                        <i class="material-icons">check</i>
+                    </button>
+                </div>
+            </form>
+            <div class="input-field center-align col s12 m4">
+                <a onclick="openCreate()" class="btn-floating waves-effect indigo tooltipped" data-tooltip="Crear">
+                    <i class="material-icons">add</i>
+                </a>
+                <a onclick="openReport()" class="btn-floating waves-effect amber tooltipped" data-tooltip="Reporte">
+                    <i class="material-icons">assignment</i>
+                </a>
+            </div>
+        </div>
+
+        <table class="highlight">
+            <thead>
+                <tr>
+                    <th>PRODUCTO</th>
+                    <th>COLOR</th>
+                    <th>CANTIDAD</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-rows"></tbody>
+        </table>
+
+        <div id="save-modal" class="modal">
+            <div class="row right">
+                <a class="black-text tooltipped modal-close" data-tooltip="Cerrar">
+                    <i class="small material-icons">close</i>
+                </a>
+            </div>
+            <div class="modal-content">
+                <h4 id="modal-title" class="center-align"></h4>
+                <form class="row" method="post" id="save-form">
+                    <input class="hide" type="number" id="id" name="id">
+                    <div class="input-field col s12 m6">
+                        <select id="producto" name="producto"></select>
+                        <label>Producto</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <select id="color" name="color"></select>
+                        <label>Color</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">format_list_numbered</i>
+                        <input id="cantidad" type="number" name="cantidad" class="validate" required>
+                        <label for="cantidad">Cantidad</label>
+                    </div>
+                    <div class="col s12 center-align">
+                        <button type="reset" class="btn-floating waves-effect grey tooltipped" data-tooltip="Reiniciar">
+                            <i class="material-icons">autorenew</i>
+                        </button>
+                        <button type="submit" class="btn-floating waves-effect blue tooltipped" data-tooltip="Guardar">
+                            <i class="material-icons">save</i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer black"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../controllers/components.js"></script>
+    <script src="../../controllers/dashboard/online.js"></script>
+    <script src="../../controllers/dashboard/stocks.js"></script>
+</body>
+
+</html>

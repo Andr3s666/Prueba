@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- Declaración del idioma para el documento -->
+<html lang="es">
+
+<head>
+    <!-- Codificación de caracteres para el documento -->
+    <meta charset="utf-8">
+    <!-- Título del documento -->
+    <title>Dashboard - Iniciar sesión</title>
+    <!-- Optimización de la página web para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Llamada de archivo como icono -->
+    <link type="image/png" rel="icon" href="../../resources/img/logowalk.jpeg">
+    <!-- Importación de archivos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../../resources/css/dashboard.css">
+</head>
+
+<body>
+    <!-- Encabezado del documento -->
+    <header></header>
+    <!-- Contenido principal del documento -->
+    <main class="container">
+        <!-- Título del contenido principal -->
+        <h3 class="center-align">Iniciar sesión</h3>
+        <!-- Formulario para iniciar sesión -->
+        <form class="row" method="post" id="session-form">
+            <div class="input-field col s12 m6 offset-m3 l4 offset-l4">
+                <i class="material-icons prefix">person_pin</i>
+                <input id="alias" type="text" name="alias" class="validate" required>
+                <label for="alias">Alias</label>
+            </div>
+            <div class="input-field col s12 m6 offset-m3 l4 offset-l4">
+                <i class="material-icons prefix">security</i>
+                <input id="clave" type="password" name="clave" class="validate" required>
+                <label for="clave">Clave</label>
+            </div>
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-floating waves-effect blue tooltipped" data-tooltip="Ingresar">
+                    <i class="material-icons">send</i>
+                </button>
+            </div>
+        </form>
+    </main>
+    <!-- Pie del documento -->
+    <footer class="page-footer black"></footer>
+    <!-- Importación de archivos JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../controllers/components.js"></script>
+    <script src="../../controllers/dashboard/offline.js"></script>
+    <script src="../../controllers/dashboard/index.js"></script>
+</body>
+
+</html>

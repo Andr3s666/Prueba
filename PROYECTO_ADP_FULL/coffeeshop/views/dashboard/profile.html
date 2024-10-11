@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Declaración del idioma para el documento -->
+<html lang="es">
+
+<head>
+    <!-- Codificación de caracteres para el documento -->
+    <meta charset="utf-8">
+    <!-- Título del documento -->
+    <title>Dashboard - Editar perfil</title>
+    <!-- Optimización de la página web para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Llamada de archivo como icono -->
+    <link type="image/png" rel="icon" href="../../resources/img/logowalk.jpeg">
+    <!-- Importación de archivos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../../resources/css/dashboard.css">
+</head>
+
+<body>
+    <!-- Encabezado del documento -->
+    <header></header>
+    <!-- Contenido principal del documento -->
+    <main class="container">
+        <!-- Título del contenido principal -->
+        <h3 class="center-align">Editar perfil</h3>
+        <!-- Formulario para cambiar datos personales -->
+        <form class="row" method="post" id="profile-form">
+            <div class="input-field col s12 m6">
+                <i class="material-icons prefix">person</i>
+                <input id="nombres" type="text" name="nombres" class="validate" required>
+                <label for="nombres">Nombres</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <i class="material-icons prefix">person</i>
+                <input id="apellidos" type="text" name="apellidos" class="validate" required>
+                <label for="apellidos">Apellidos</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <i class="material-icons prefix">email</i>
+                <input id="correo" type="email" name="correo" class="validate" required>
+                <label for="correo">Correo</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <i class="material-icons prefix">person_pin</i>
+                <input id="alias" type="text" name="alias" disabled>
+                <label for="alias">Alias</label>
+            </div>
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-floating waves-effect blue tooltipped" data-tooltip="Guardar">
+                    <i class="material-icons">save</i>
+                </button>
+            </div>
+        </form>
+    </main>
+    <!-- Pie del documento -->
+    <footer class="page-footer black"></footer>
+    <!-- Importación de archivos JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../controllers/components.js"></script>
+    <script src="../../controllers/dashboard/online.js"></script>
+    <script src="../../controllers/dashboard/profile.js"></script>
+</body>
+
+</html>

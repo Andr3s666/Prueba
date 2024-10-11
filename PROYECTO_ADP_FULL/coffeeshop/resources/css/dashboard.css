@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Estilos para los enlaces del menú */
+nav ul li a {
+    padding: 10px 10px; /* Espaciado interno para mejor clicabilidad */
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+}
